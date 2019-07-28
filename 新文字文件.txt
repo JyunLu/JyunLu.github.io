@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+	<title>LU_foodpanda</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</head>
+
+<header>
+	<div class="headeritem">
+		<a href="#"><i class="far fa-user fa-2x" style="color:#e6005c;"></i>&nbsp;</a>
+	<!-- 	<a href="javascript: void(0)" onclick="showPopup()">登入</a> -->
+	</div>
+	<div class="headeritem">
+		<a href="##" style="color:#e6005c;" ><font size="6">foodpanda</font></a>
+	</div>
+	<div class="headeritem">
+		<a href="#"><i class="fas fa-shopping-bag fa-2x" style="color:#e6005c;"></i>&nbsp;</a>
+	</div>
+
+</header><!-- /header -->
+<body>
+<form>
+<input type="text" name=text" class="search" placeholder="輸入您欲送達的地址">
+<input type="submit" name=submit" class="submit" value="搜">
+</form>
+<a class="btn btn-danger" href="#" role="button">外送</a>
+<a class="btn btn-danger" href="#" role="button">外送自取</a>
+
+
+<!-- 	
+	<div class="dialog" id="login">
+		<table class="content" cellpadding="5" width=292px>
+			<tr><td>會員等級：</td></tr>
+			<tr><td>評價統計：</td></tr>
+			<tr><td>點數：</td></tr>
+			<tr align="right"><td><a href="javascript: void(0)" onclick="hidePopup()">返回</a> </td></tr>
+		</table>
+	</div>
+	<div id="back"></div>
+ -->
+
+	<style type="text/css">
+		a {
+    		text-decoration:none;
+		}
+		header{
+			display: flex;
+			justify-content: space-between;
+			position: relative;
+		}
+		.headeritem{
+ 			display: flex;
+ 			flex-direction: column;
+ 			align-self: flex-end;
+ 			font-family: 'Rubik', sans-serif;
+		}
+		form{
+			width: 400px;
+			margin:auto;
+			margin-top: 250px;
+		}
+		.search{
+			width: 80%;
+			padding: 10px;
+			font-size:20px;
+		}
+		.submit{
+			width: 10%;
+			padding: 10px;
+			font-size:20px;		
+
+		}
+		.btn btn-danger{
+			margin:auto;
+			margin-top: 250px;
+		}
+		/*灰底背景*/
+		#back{
+			visibility:hidden ;
+			left:0;
+			top :0;
+			width  :100%;
+			height :100%;
+			filter:alpha(Opacity=10);
+			-moz-opacity:0.3;
+			opacity     :0.3;
+			z-index     :1;
+		}
+		
+		/*小視窗*/
+		.dialog{
+			z-index             :2;
+			background-color: white;
+			position:absolute;
+			top:50%;
+			left:50%;
+			border-radius:10px;
+			
+			display: inline-block;
+			margin-right:20px;
+		box-shadow:3px 3px 9px gray;
+		overflow:hidden; /*超出框外的文字hide*/
+		}
+		/*內文字*/
+		.content{
+			padding: 10px;
+			margin-top: 20px；
+			width=200px;
+		}
+		/*會員詳細資料*/
+		#more_user{
+			visibility:hidden ;
+			width:300px;
+			height:260px;
+			margin-top: -130px;
+			margin-left: -150px;
+		}
+	</style>
+	<script>
+		// 點more show 會員詳細資料
+		function showPopup(){
+			document.getElementById("back").style.visibility = "visible";
+			document.getElementById("more_user").style.visibility = "visible";
+		}
+		function hidePopup(){
+			document.getElementById("back").style.visibility = "hidden";
+			document.getElementById("more_user").style.visibility = "hidden";
+		}
+	</script>
+</body>
+</html>
