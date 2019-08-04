@@ -1,138 +1,200 @@
 <!DOCTYPE html>
 <head>
 	<title>LU_foodpanda</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8">
+	<script src="jquery.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
 	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 
 <header>
 	<div class="headeritem">
-		<a href="#"><i class="far fa-user fa-2x" style="color:#e6005c;"></i>&nbsp;</a>
-	<!-- 	<a href="javascript: void(0)" onclick="showPopup()">登入</a> -->
+		<a href="#"><i class="far fa-user fa-1x" style="color:#e6005c;"></i>&nbsp;</a>
+		<!-- 	<a href="javascript: void(0)" onclick="showPopup()">登入</a> -->
 	</div>
 	<div class="headeritem">
-		<a href="##" style="color:#e6005c;" ><font size="6">foodpanda</font></a>
+		<a href="##" style="color:#e6005c;" ><font size="4">foodpanda</font></a>
 	</div>
 	<div class="headeritem">
-		<a href="#"><i class="fas fa-shopping-bag fa-2x" style="color:#e6005c;"></i>&nbsp;</a>
+		<a href="#"><i class="fas fa-shopping-bag fa-1x" style="color:#e6005c;"></i>&nbsp;</a>
 	</div>
+</header>
 
-</header><!-- /header -->
 <body>
-<form>
-<input type="text" name=text" class="search" placeholder="輸入您欲送達的地址">
-<input type="submit" name=submit" class="submit" value="搜">
-</form>
-<a class="btn btn-danger" href="#" role="button">外送</a>
-<a class="btn btn-danger" href="#" role="button">外送自取</a>
 
-
-<!-- 	
-	<div class="dialog" id="login">
-		<table class="content" cellpadding="5" width=292px>
-			<tr><td>會員等級：</td></tr>
-			<tr><td>評價統計：</td></tr>
-			<tr><td>點數：</td></tr>
-			<tr align="right"><td><a href="javascript: void(0)" onclick="hidePopup()">返回</a> </td></tr>
-		</table>
-	</div>
-	<div id="back"></div>
- -->
-
-	<style type="text/css">
-		a {
-    		text-decoration:none;
-		}
-		header{
-			display: flex;
-			justify-content: space-between;
-			position: relative;
-		}
-		.headeritem{
- 			display: flex;
- 			flex-direction: column;
- 			align-self: flex-end;
- 			font-family: 'Rubik', sans-serif;
-		}
-		form{
-			width: 400px;
-			margin:auto;
-			margin-top: 250px;
-		}
-		.search{
-			width: 80%;
-			padding: 10px;
-			font-size:20px;
-		}
-		.submit{
-			width: 10%;
-			padding: 10px;
-			font-size:20px;		
-
-		}
-		.btn btn-danger{
-			margin:auto;
-			margin-top: 250px;
-		}
-		/*灰底背景*/
-		#back{
-			visibility:hidden ;
-			left:0;
-			top :0;
-			width  :100%;
-			height :100%;
-			filter:alpha(Opacity=10);
-			-moz-opacity:0.3;
-			opacity     :0.3;
-			z-index     :1;
-		}
+	<div class="wrap">
+		<div class="item">
+			<p>把您喜歡的食物外送給你</p>
+		</div>
 		
-		/*小視窗*/
-		.dialog{
-			z-index             :2;
-			background-color: white;
-			position:absolute;
-			top:50%;
-			left:50%;
-			border-radius:10px;
+		<div class="search-wrap">
+			<form>
+				<input type="text" name=text" class="search" placeholder="輸入您欲送達的地址" style="box-shadow: 1px 1px 19px rgba(0,0,0,0.2)">
+			</form>
+		</div>
+		<div class="button-wrap">
+			<a class="btn btn-danger" href="#" role="button">外送</a>
+			<a class="btn btn-danger" href="#" role="button">外送自取</a>
+		</div>
+
+	</div>
+
+	<div class="wrap">
+		<div class="city-group">
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Tapei1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/New-Taipei1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Taichung1.jpg?v=1459522682">
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Kaohsiung1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Kaohsiung1.jpg?v=1459522682" >
+			</div>
+						<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Tapei1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/New-Taipei1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Taichung1.jpg?v=1459522682">
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Kaohsiung1.jpg?v=1459522682" >
+			</div>
+			<div class="city">
+				<img src="https://asia-public.foodpanda.com/marketing/production/tw/images/nl/city-images/Kaohsiung1.jpg?v=1459522682" >
+			</div>
+		</div>
+	</div>
+		
+	<style type="text/css">
+		/*header*/
+			a {
+			text-decoration:none;
+			}
+			header{
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+			}
+			.headeritem{
+				display: flex;
+				flex-direction: column;
+				align-self: flex-end;
+				font-family: 'Rubik', sans-serif;
+				padding: 10px;
+			}
+			*{
+				margin:0;
+				padding:0;
+				list-style: none;
+			}
 			
-			display: inline-block;
-			margin-right:20px;
-		box-shadow:3px 3px 9px gray;
-		overflow:hidden; /*超出框外的文字hide*/
-		}
-		/*內文字*/
-		.content{
-			padding: 10px;
-			margin-top: 20px；
-			width=200px;
-		}
-		/*會員詳細資料*/
-		#more_user{
-			visibility:hidden ;
-			width:300px;
-			height:260px;
-			margin-top: -130px;
-			margin-left: -150px;
-		}
+			.wrap{
+				position: relative;
+				width: 100%;
+				max-width: 1425px;
+				margin-left: auto;
+				margin-right: auto;
+				padding-left: 24px;
+				padding-right: 24px;
+				/*display: flex;*/
+				flex-wrap: wrap
+			}
+			.item{
+ 				max-width: 70%;
+ 	 			padding: 80px 0 48px 0;
+   				word-wrap: break-word;
+   				font-size: 32px;
+    		}
+
+    	/*搜尋列*/
+			form{
+				margin: auto;
+				display: flex;
+				align-content;
+				align-content:space-around ;
+			}
+			.search{
+				padding: 12px 55px 12px 15px;
+				font-size:20px;
+				width:100%;
+			}
+			.submit{
+				width: 10%;
+				padding: 10px;
+						font-size:20px;
+			}
+			.btn btn-danger{
+				margin:auto;
+				margin-top: 250px;
+			}
+			
+		/*城市列*/
+			.city img{
+				width:216px;
+				height:276px;
+				overflow: hidden;
+				object-fit: cover;
+
+			}
+			.city{
+				margin:0px 10px 20px;
+			}
+			.city-group{
+/*				display:flex;
+*/				margin:0px 10px 48px;
+				overflow:auto;
+				display: flex;
+			}
+
+
+	/*RWD_電腦*/
+			@media screen and(min-width: 480px) {
+				.wrap{
+					display: flex;
+					flex-wrap: wrap
+				}
+				.city-group{
+    				display: flex;
+    				flex-wrap: wrap;
+    				overflow: hidden;
+				}
+			}
+			@media (min-width: 960px){
+				.wrap{
+    			padding-bottom: 80px;
+				}
+				.city-group{
+    				display: flex;
+    				flex-wrap: wrap;
+    				overflow: hidden;
+				}
+			}
+
 	</style>
-	<script>
-		// 點more show 會員詳細資料
-		function showPopup(){
-			document.getElementById("back").style.visibility = "visible";
-			document.getElementById("more_user").style.visibility = "visible";
-		}
-		function hidePopup(){
-			document.getElementById("back").style.visibility = "hidden";
-			document.getElementById("more_user").style.visibility = "hidden";
-		}
-	</script>
-</body>
+		<script>
+			// 點more show 會員詳細資料
+			function showPopup(){
+				document.getElementById("back").style.visibility = "visible";
+				document.getElementById("more_user").style.visibility = "visible";
+			}
+			function hidePopup(){
+				document.getElementById("back").style.visibility = "hidden";
+				document.getElementById("more_user").style.visibility = "hidden";
+			}
+		</script>
+	</body>
 </html>
