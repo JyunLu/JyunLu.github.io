@@ -1,132 +1,60 @@
-/*header*/
-
 * {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-.headeritem a {
+nav a {
     text-decoration: none;
     color: #D70F64;
 }
 
-.wrapheader {
-    width: 100%;
-    position: fixed;
-    height: 55px;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 0;
-    z-index: 9999;
-    /* box-shadow: 4px 4px 12px -2px rgba(20%, 20%, 40%, 0.5); */
+.address_section {
+    background-image: url(https://images.deliveryhero.io/image/foodpanda/hero-home-tw.jpg?width=800&height=512);
+    background-position: 70vw;
+    background-repeat: no-repeat;
+    background-size: 400px;
 }
 
-.clearfix {
-    clear: both;
+.address_section__slogan h1 {
+    font-size: 1.6em;
+    font-weight: 500;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: auto;
-    background-color: #fff;
-}
-
-.headeritem {
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    font-family: 'Rubik', sans-serif;
-    padding: 10px;
-}
-
-.content {
-    flex: auto;
-    height: 1000px;
-}
-
-.wrap {
-    position: relative;
-    width: 100%;
-    max-width: 1425px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 24px;
-    padding-right: 24px;
-    /*display: flex;*/
-    flex-wrap: wrap;
-}
-
-.item {
-    max-width: 70%;
-    padding: 80px 0 48px 0;
-    word-wrap: break-word;
-    font-size: 30px;
-    font-family: inherit;
-    position: relative;
-    margin-top: 50px;
-    overflow: hidden;
-    font-family: 'Noto Serif TC', serif;
-    color: #333333;
-}
-
-
-/*搜尋列*/
-
-.search-wrap {
-    width: auto;
-    margin-top: auto;
-    position: relative;
-    padding: 10px;
-}
-
-form {
-    margin: auto;
-    display: flex;
-    align-content: space-around;
-}
-
-.search {
-    padding: 12px 55px 12px 15px;
-    font-size: 20px;
-    width: 100%;
-}
-
-.submit {
-    width: 10%;
-    padding: 10px;
-    font-size: 20px;
-}
-
-.search__button {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: auto;
-    padding: 16px 0px;
-}
-
-.search__button .submit {
+.button {
     background-color: #D70F64;
-    color: #fff;
-    font-size: 14px;
-    width: 100%;
-    height: 55px;
-    font-size: 16px;
-    font-weight: bold;
+    color: white;
+    border-radius: 0%;
+    height: 64px;
+    font-weight: 600;
+    border: none;
+    line-height: 48px;
+}
+
+.search__input input {
+    border-radius: 0%;
+    height: 64px;
+    box-shadow: none;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.12);
+}
+
+.join_section {
+    background-image: url(https://images.deliveryhero.io/image/foodpanda/home-vendor-tw.jpg?width=800&height=512);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+.join_section__intro {
+    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.12);
+    margin-top: 180px;
+    border-radius: 0;
+    border: none;
 }
 
 
-/* vender資訊 */
-
-.pic_oldman img {
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
+/* join-section */
 
 .full-container {
     /* padding: 0px 24px; */
@@ -136,11 +64,10 @@ form {
 }
 
 .vender-content {
-    width: auto;
-    padding: 16px;
     box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.12);
     background-color: white;
     z-index: 2;
+    margin-top: 100px;
 }
 
 #vender-button {
@@ -156,7 +83,7 @@ form {
 }
 
 
-/*城市列*/
+/* city-section */
 
 .city img {
     width: 216px;
@@ -171,7 +98,7 @@ form {
 }
 
 .city-group {
-    margin: 100px 10px 150px 48px;
+    /* margin: 100px 10px 150px 48px; */
     overflow: auto;
     display: flex;
     justify-content: center;
@@ -201,14 +128,14 @@ form {
 
 .home-section-apps-image img {
     width: 100%;
+    margin: -50px 0px 0px;
+    background-position: top center;
     z-index: 1;
-    margin: -100px 24px 0px;
-    background-position: center;
-    z-index: 1;
+    padding: 0px 100px;
 }
 
 .home-section-apps-content {
-    padding: 24px;
+    padding: 0px 24px 16px;
     color: #fff;
 }
 
@@ -242,41 +169,12 @@ form {
     margin: 50px;
 }
 
-
-/* vender資訊 */
-
-.pic_company img {
-    margin-top: 100px;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-.full-container {
-    padding: 0px 24px;
-    z-index: 2;
-    margin-top: -100px;
-    display: inline-block;
-}
-
-.vender-content {
-    width: auto;
-    padding: 16px;
-    box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.12);
-    background-color: white;
-    z-index: 2;
-}
-
-#vender-button {
-    display: inline-block;
-    background-color: #D70F64;
-    color: #fff;
-    font-size: 14px;
-    width: 100%;
-    height: 48px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 48px;
+.vender_section {
+    background-image: url(https://images.deliveryhero.io/image/foodpanda/home-corporate-tw.jpg?width=600&height=384);
+    background-repeat: no-repeat;
+    background-size: covor;
+    background-position: top center;
+    height: 280px;
 }
 
 
